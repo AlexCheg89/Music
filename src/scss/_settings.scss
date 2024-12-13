@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,6 +11,7 @@
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  color: white;
 }
 
 .page__body {
@@ -16,6 +19,7 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  background-color: #111111;
 }
 
 img {
