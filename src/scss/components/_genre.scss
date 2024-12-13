@@ -1,5 +1,5 @@
 .genre {
-
+  // width: 60%;
   &__title {
     display: flex;
     align-items: center;
@@ -24,8 +24,7 @@
   }
 
   &__container {
-    width: 60%;
-    border: 1px solid red;
+
   }
 
   &__list {

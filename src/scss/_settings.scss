@@ -7,11 +7,12 @@
 }
 
 .page {
-  height: 100%;
+  min-height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   color: white;
+  border: 1px solid green;
 }
 
 .page__body {
@@ -20,6 +21,7 @@
   min-height: 100%;
   font-size: 16px;
   background-color: #111111;
+  border: 1px solid yellow;
 }
 
 img {
@@ -34,8 +36,8 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
-}
 
+}
 .is-hidden {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
