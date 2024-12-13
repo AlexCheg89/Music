@@ -1,0 +1,93 @@
+.genre {
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #f1f1f1;
+  }
+
+  &__title::before {
+    display: inline-block;
+    content: "";
+    width: 22px;
+    height: 26px;
+    margin-right: 10px;
+    background-image: url('/../../img/svg/genre.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__container {
+    width: 60%;
+    border: 1px solid red;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 66px;
+    gap: 24px;
+  }
+
+  &__link {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: right;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    background: linear-gradient(136deg, #b5179e 0%, #7209b7 100%);
+    background-clip: text;
+  }
+}
+
+.genre-list {
+  &__item {
+    position: relative;
+    border-radius: 20px;
+    width: 239px;
+    height: 269px;
+    overflow: hidden;
+  }
+
+  &__img {
+
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(31px);
+    background: rgba(69, 69, 69, 0.7);
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #dedede;
+  }
+
+  &__quantity {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #fff;
+  }
+}
