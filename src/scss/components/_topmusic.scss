@@ -1,0 +1,26 @@
+.topmusic {
+
+
+}
+
+.topmusic-list {
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item:not(last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 10px;
+    color: inherit;
+    width: 100%;
+    justify-content: space-between;
+
+    background: rgba(35, 35, 35, 0.3);
+  }
+}
