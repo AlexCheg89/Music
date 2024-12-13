@@ -29,16 +29,34 @@
     display: flex;
     padding: 15px;
     align-items: center;
-    gap: 19px;
+    gap: 15px;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #fff;
-    border: 1px solid red;
+    //border: 2px solid #fff;
+    border-radius: 6px;
+    transition: color ease-in-out 0.3s;
+  }
+
+  &__link:hover {
+    color: #7209b7;
   }
 
   &__link:not(last-child) {
     margin-bottom: 5px;
   }
+
+  &__link--active {
+    background: linear-gradient(136deg, #b5179e 0%, #7209b7 100%);
+  }
+  &__link--active:hover {
+    color: currentColor;
+  }
+}
+
+svg {
+  fill: transparent;
+  stroke: currentColor;
 }
