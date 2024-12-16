@@ -1,0 +1,60 @@
+.menu-music {
+  width: 275px;
+  padding: 20px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(176px);
+  background: rgba(65, 65, 65, 0.65);
+  box-shadow: 6px 4px 100px 0 rgba(0, 0, 0, 0.8);
+
+  &__title {
+    padding-bottom: 13px;
+    margin-bottom: 47px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #b8b8b8;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(136deg, #b5179e 0%, #7209b7 100%);
+    border-image-slice: 1;
+  }
+}
+
+.menu-music-list {
+
+  &__item {
+    padding: 7px 16px;
+    width: 100%;
+    height: 58px;
+    background: rgba(35, 35, 35, 0.3);
+  }
+
+  &__item div {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: left;
+    color: #fff;
+
+  }
+
+  &__btn {
+    border: none;
+    color: white;
+    background: transparent;
+  }
+}
