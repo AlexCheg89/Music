@@ -12,16 +12,14 @@
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   color: white;
-  border: 1px solid green;
 }
 
 .page__body {
   margin: 0;
-  min-width: 360px;
+  min-width: 320px;
   min-height: 100%;
   font-size: 16px;
   background-color: #111111;
-  border: 1px solid yellow;
 }
 
 img {
@@ -35,7 +33,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  //overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 
 }
 .is-hidden {
@@ -85,6 +83,9 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include small-mobile {
+    padding: 0 5px;
+  }
 }
 
 .centered {
@@ -103,4 +104,17 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  //margin-bottom: 34px;
+  @include adaptive-value('margin-bottom', 34, 18, 3);
+  font-size: 26px;
+  @include adaptive-value('font-size', 26, 18, 3);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #f1f1f1;
 }

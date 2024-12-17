@@ -5,6 +5,9 @@
   backdrop-filter: blur(176px);
   background: rgba(65, 65, 65, 0.65);
   box-shadow: 6px 4px 100px 0 rgba(0, 0, 0, 0.8);
+  @include small-mobile {
+    display: none;
+  }
 
   &__title {
     padding-bottom: 13px;
@@ -27,6 +30,18 @@
     width: 100%;
     height: 58px;
     background: rgba(35, 35, 35, 0.3);
+  }
+
+  &__img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-image: linear-gradient(136deg, #b5179e 0%, #7209b7 100%);
+    background-origin: border-box;
+    //background-clip: content-box, border-box;
+    border-image-slice: 1;
   }
 
   &__item div {

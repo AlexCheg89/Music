@@ -1,7 +1,7 @@
 <?php
-header( 'content-type: text/html; charset:utf-8' );
-session_start();
-error_reporting( 0 );
+// header( 'content-type: text/html; charset:utf-8' );
+// session_start();
+// error_reporting( 0 );
 
 /*
 Noctifer Music 0.7.5

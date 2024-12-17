@@ -1,38 +1,64 @@
 .header {
-  padding-top: 39px;
-  padding-bottom: 39px;
+  @include adaptive-value('padding-top', 39, 15, 3);
+  @include adaptive-value('padding-bottom', 39, 30, 3);
+  @include adaptive-value('padding-left', 17, 10, 3);
+  @include adaptive-value('padding-right', 17, 10, 3);
   &__container {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
+    gap: 20px;
     align-items: center;
+
+    @include small-mobile {
+      justify-content: flex-start;
+    }
   }
 
   &__user {
     display: flex;
-    gap: 25px;
+    //gap: 25px;
+    @include adaptive-value('gap', 25, 10, 3);
+    @include small-mobile {
+      margin-right: 10px;
+    }
   }
 }
 
 .logo {
   display: flex;
-  padding-left: 17px;
   align-items: center;
-  gap: 16px;
+  @include adaptive-value('gap', 16, 9, 3);
   color: #d9d9d9;
-  font-size: 30px;
+  @include adaptive-value('font-size', 30, 20, 3);
   font-weight: 900;
+
+  @include small-mobile {
+    margin-right: auto;
+  }
+}
+
+.logo img {
+  @include small-mobile {
+    width: 20px;
+  }
 }
 
 .search {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   gap: 22px;
   border-radius: 36px;
   padding: 15px 22px;
-  width: 776px;
+  //width: 776px;
+  //@include adaptive-value('width', 776px, 0, 3);
   height: 52px;
   backdrop-filter: blur(176px);
   background: rgba(65, 65, 65, 0.65);
+
+  @include small-mobile {
+    display: none;
+  }
 
   &__input {
     width: 100%;
@@ -52,11 +78,22 @@
 }
 
 .user {
+  &__img {
+
+    @include small-mobile {
+      width: 30px;
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+
+    @include small-mobile {
+      display: none;
+    }
   }
 
   &__nickname {

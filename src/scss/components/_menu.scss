@@ -7,6 +7,10 @@
   background: rgba(65, 65, 65, 0.65);
   box-shadow: 6px 4px 100px 0 rgba(0, 0, 0, 0.8);
 
+  @include small-mobile {
+    display: none;
+  }
+
   &__title {
     padding-bottom: 13px;
     margin-bottom: 47px;

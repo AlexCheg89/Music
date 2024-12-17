@@ -1,21 +1,14 @@
 <?php
 
-require './config/db.php';
-
 $db = new Database();
 
-$data ='genre';
-
-$genre = $db->GetData($data);
+$genre = $db->GetData(null, 'genre');
 
 ?>
 
 <section class="genre">
   <div class="container genre__container">
-    <h2 class="title genre__title">Discover genre</h2>
-
-
-
+    <h2 class="section-title title genre__title">Откройте для себя жанр</h2>
 
     <ul class="genre__list genre-list">
       <?php

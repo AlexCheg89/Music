@@ -1,14 +1,7 @@
 .genre {
   // width: 60%;
   &__title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 34px;
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #f1f1f1;
+
   }
 
   &__title::before {
@@ -23,14 +16,13 @@
     background-size: cover;
   }
 
-  &__container {
-
-  }
-
   &__list {
     display: flex;
     margin-bottom: 66px;
     gap: 24px;
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__link {
@@ -51,9 +43,23 @@
   &__item {
     position: relative;
     border-radius: 20px;
-    width: 239px;
+    max-width: 239px;
     height: 269px;
     overflow: hidden;
+
+    @include tablet {
+      flex-grow: 1;
+      display: flex;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__img {
+
+    @include tablet {
+      width: 70px;
+    }
   }
 
   &__content {
@@ -67,11 +73,16 @@
     left: 0;
     backdrop-filter: blur(31px);
     background: rgba(69, 69, 69, 0.7);
+
+    @include tablet {
+      position: static;
+    }
   }
 
   &__title {
     margin-bottom: 7px;
-    font-size: 18px;
+    //font-size: 18px;
+    @include adaptive-value('font-size', 18, 14, 3);
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: capitalize;
