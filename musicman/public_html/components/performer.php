@@ -15,8 +15,8 @@ $performer = $db->GetData(null, 'performer');
           <li class="menu-music-list__item">
             <a href="band.php?id=<?=$row['id'];?>" class="menu-music-list__link">
               <div>
-                <img class="menu-music-list__img" src="<?=$row['path_image']; ?>" alt="<?=$row['name']; ?>">
-                <h3 class="menu-music-list__name"><?=$row['name']; ?></h3>
+                <img class="menu-music-list__img" src="<?=$row['performerPath_image']; ?>" alt="<?=$row['name']; ?>">
+                <h3 class="menu-music-list__name"><?=$row['performerName']; ?></h3>
               </div>
               <button class="menu-music-list__btn">
                 <img src="/img/svg/more.svg" alt="">

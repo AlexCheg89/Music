@@ -15,10 +15,10 @@ $genre = $db->GetData(null, 'genre');
         foreach ($genre as $row) {
           ?>
             <li class="genre-list__item list-reset">
-              <img class="genre-list__img" src="<?=$row['path_image']; ?>" alt="<?=$row['name']; ?>">
+              <img class="genre-list__img" src="<?=$row['genrePath_image']; ?>" alt="<?=$row['genreName']; ?>">
               <div class="genre-list__content">
                 <div>
-                  <h3 class="genre-list__title"><?=$row['name']; ?></h3>
+                  <h3 class="genre-list__title"><?=$row['genreName']; ?></h3>
                   <p class="genre-list__quantity"><?=$db->TotalSongsOfGenre($row["id"]); ?> треков</p>
                 </div>
                 <img src="/img/svg/genre_play.svg" alt="play">

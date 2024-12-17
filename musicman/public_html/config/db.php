@@ -33,10 +33,29 @@
       return $genre;
     }
 
-    public function TotalSongsOfGenre($genre) {
-      $sql = "SELECT * FROM songs WHERE genre = :genre";
+    public function GetSongsList()  {
+      $songs = array();
+
+      $sql = "SELECT songs.id, songs.songName, genre.genreName, songs.songAlbum, performer.performerName, songs.songPath FROM `songs`
+JOIN genre ON genre.id = songs.genreId
+JOIN performer ON performer.id = songs.performerId";
+
       $stmt = $this->conn->prepare($sql);
-      $stmt->bindValue(":genre", $genre);
+      $stmt->execute();
+
+      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach ($result as $row) {
+        $songs[] = $row;
+      }
+
+      return $songs;
+    }
+
+    public function TotalSongsOfGenre($genre) {
+      $sql = "SELECT * FROM songs WHERE genreId = :genreId";
+      $stmt = $this->conn->prepare($sql);
+      $stmt->bindValue(":genreId", $genre);
       $stmt->execute();
       $quantity = $stmt->rowCount();
 
