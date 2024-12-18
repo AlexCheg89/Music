@@ -1,4 +1,251 @@
-.player {
+#playercontainer {
+  padding: 20px 0;
+  background-color: #333;
+}
+
+#player {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  //background-color: #111;
+}
+
+#albumart {
+  display: none;
+  width: 7.25vw;
+  height: 7.25vw;
+  margin-right: 10px;
+}
+
+#song {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#songinfo { }
+
+#songinfo div {
+  color: grey;
+  //text-align: {$songinfoalign};
+  font-size: 1.2vw;
+  height: 1.4vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+#artist {
+  display: none;
+}
+
+#album {
+  display: none;
+}
+
+#year {
+  margin-left: .35em;
+  display: none;
+}
+
+// #year:before {
+//   content: "(";
+// }
+
+// #year:after {
+//         content: ")";
+// }
+
+#player audio {
+  width: 100%;
+  height: 1.3vw;
+  margin-top: 1.5vw;
+}
+
+#divider {
+  height: 2px;
+  //background-color: {$accentbg};
+}
+
+#error {
+  box-sizing: border-box;
+  width: 100%;
+  //display: {$errordisplay};
+  color: white;
+  text-align: center;
+  word-break: break-all;
+  margin: 20px auto 10px auto;
+  background-color: #a00;
+  padding: 10px;
+}
+
+#interactioncontainer {
+  box-sizing: border-box;
+  line-height: 1.5; }
 
 
+#playlisttitle, #breadcrumbs, #passwordrequest {
+  font-size: medium;
+  margin-top: 10px;
+  flex-grow: 1;
+  color: #333;
+  //background-color: {$menubg};
+}
+
+#playlisttitle {
+  font-weight: bold;
+  padding: 10px; }
+
+#passwordrequest {
+  display: flex;
+  padding: 10px; }
+
+#passwordrequest form {
+  display: flex;
+  flex-grow: 1; }
+
+#passwordrequest #passwordinput {
+  margin: 0 10px;
+  flex-grow: 1; }
+
+.breadcrumb, #breadcrumbactive {
+  display: inline-block;
+  padding: 10px; }
+
+.breadcrumb:hover {
+  cursor: pointer;
+  background-color: #ddd; }
+
+#breadcrumbactive {
+  font-weight: bold; }
+
+.buttons {
+  display: flex;
+  font-size: medium;
+  margin-left: 10px;
+  margin-top: 10px; }
+
+.button {
+  padding: 10px;
+  //background-color: {$menubg};
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.border {
+  border-right: 1px solid #ddd;
+}
+
+.active {
+        font-weight: bold;  }
+
+.active span {
+  //border-bottom: 2px solid {$accentbg};
+}
+
+.separator {
+  color: #bbb;
+  padding: 0 5px; }
+
+.list div {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 5px 10px;
+  color: #333;
+  //background-color: {$menubg};
+  border-bottom: 1px solid #ddd; }
+
+.list div:last-child {
+  margin-bottom: 10px;
+  border: 0; }
+
+.list .dir:hover, .list .file:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  font-weight: bold; }
+
+.list .nowplaying {
+  //background-color: {$accentbg};
+  font-weight: bold; }
+
+.nowplaying > div {
+  //background-color: {$accentbg};
+}
+
+.nowplaying:hover > div {
+  //background-color: {$menubg};
+  }
+
+.list .file {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+
+.list .file a {
+  display: block;
+  flex-grow: 1;
+  color: #333;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.list .nowplaying a {
+  //color: {$accentfg};
+  }
+
+.list .file a:active {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.list .file .filebutton {
+  border-radius: 100%;
+  border: 0;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  // color: {$filebuttonfg};
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+  font-size: medium;
+  padding: 0;
+  display: block;
+}
+
+.list .file .filebutton:hover {
+  // color: {$accentfg};
+  // background-color: {$accentbg};
+}
+
+.list .file .playlistdirectory {
+  width: 100%;
+  font-size: x-small;
+}
+
+@media screen and (max-width: 900px) and (orientation:portrait) {
+  #player, #error, #header, .list div { width: 95%; }
+  #albumart { width: 24vw; height: 24vw; }
+  #songinfo div { height: 5vw; font-size: 4vw; }
+  #player audio { height: 5vw; }
+  #playlisttitle, #breadcrumbs, #passwordrequest, .buttons, .list { font-size: small; }
+}
+
+@media screen and (max-width: 900px) and (orientation:landscape) {
+  #stickycontainer { position: static; }
+  #player, #error, #header, .list div { width: 80%; }
+  #albumart { width: 12vw; height: 12vw; }
+  #songinfo div { height: 2.5vw; font-size: 2vw; }
+  #player audio { height: 2.5vw; }
+  #playlisttitle, #breadcrumbs, #passwordrequest, .buttons, .list { font-size: small; }
 }

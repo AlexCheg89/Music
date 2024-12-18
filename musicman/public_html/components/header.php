@@ -18,7 +18,7 @@
   <div class="site-container">
     <header class="header">
       <div class="container header__container">
-        <a href="index.html" class="logo">
+        <a href="./index.php" class="logo">
           <img src="/img/svg/logo.svg" alt="logo">
           <p>MusicMan</p>
         </a>
@@ -26,13 +26,13 @@
           <img src="/img/svg/icon_search.svg" alt="search">
           <input class="search__input" type="text" placeholder="search music, artist, genre">
         </form>
-        <div class="user header__user">
+        <a href="./login.php" class="user header__user">
           <img src="/img/profile_img.png" alt="profile" class="user__img">
           <div class="user__info">
-            <p class="user__nickname">Tarisa</p>
+            <p class="user__nickname">Гость</p>
             <p class="user__descr">premium blog</p>
           </div>
-        </div>
+        </a>
         <img src="/img/svg/balls.svg" alt="balls">
       </div>
     </header>
